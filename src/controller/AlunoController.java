@@ -16,15 +16,23 @@ public class AlunoController {
     public void Controller() {
 
         System.out.println("Digite sua idade:");
+        
+        
         Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Digite sua nome:");
+        Scanner sc = new Scanner(System.in);
+       
 
         Aluno aluno = new Aluno();
 
         aluno.setIdade(scanner.nextInt());
+        aluno.setNome(sc.next());
 
         if (aluno.getIdade() >= 18 && aluno.getIdade() < 64) {
 
-            System.out.println("VOCE PODE ESUDAR");
+            System.out.println("VOCE PODE ESUDAR:  " +aluno.getNome());
+            
         } else {
             if (aluno.getIdade() < 18) {
                 System.out.println("NAO PODE");
